@@ -1,0 +1,38 @@
+class Node{
+constructor(data,next){
+this.data=data;
+this.next=next;
+}
+}
+var head=null;
+
+function linkList(arr){
+var temp;
+for(let a of arr){
+if(!head){
+var node=new Node(a,head);
+head=node;
+temp=head;
+}else{
+var node=new Node(a,temp.next);
+temp.next=node;
+temp=node;
+}
+}
+console.log('head is ',head);
+}
+linkList([10,20,40,60,100,210,5]);
+VM69:14 head is  Node {data: 10, next: Node}
+function print(head){
+let arr=[];
+var obj=head;
+while(obj){
+ arr.push(obj.data);
+obj=obj.next; 
+}
+arr=arr.map(ele=>"-->"+ele).join('');
+console.log(arr);
+}
+undefined
+print(head);
+VM651:9 -->10-->20-->40-->60-->100-->210-->5
