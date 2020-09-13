@@ -1,0 +1,18 @@
+function xyz(obj,arr){
+var obj1=obj;
+var arr1=arr;
+var i=0;
+for(let key of arr){
+result=obj1[key];
+console.log("result is",result);
+obj1=result;
+}
+}
+undefined
+xyz({'one':{'two':{'three':3}}},['one','two','three']);
+VM298:7 result is {two: {…}}
+VM298:7 result is {three: 3}
+VM298:7 result is 3
+undefined
+xyz({'one':1},['one'])
+VM298:7 result is 1
