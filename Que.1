@@ -1,11 +1,14 @@
 function xyz(obj,arr){
 var obj1=obj;
 var arr1=arr;
-var i=0;
+var result;
 for(let key of arr){
+if(typeof obj1[key]=='object'){
 result=obj1[key];
-console.log("result is",result);
 obj1=result;
+}else{
+console.log("result is",result);
+}
 }
 }
 undefined
