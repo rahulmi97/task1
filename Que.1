@@ -7,15 +7,14 @@ if(typeof obj1[key]=='object'){
 result=obj1[key];
 obj1=result;
 }else{
-console.log("result is",result);
+console.log("result is",obj1[key]);
+}
+
 }
 }
-}
-undefined
 xyz({'one':{'two':{'three':3}}},['one','two','three']);
-VM298:7 result is {two: {…}}
-VM298:7 result is {three: 3}
-VM298:7 result is 3
+VM269:10 result is 3
 undefined
-xyz({'one':1},['one'])
-VM298:7 result is 1
+xyz({'one':1},['one']);
+VM269:10 result is 1
+
